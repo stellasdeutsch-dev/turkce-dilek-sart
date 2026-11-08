@@ -730,12 +730,12 @@ details[open] summary .pm{rotate:45deg}
   <h2 class="ad-h">Вот так разобрана <span class="frm"><i></i><i></i><i></i><i></i><span class="br">одна</span></span> тема</h2>
   <p class="lead">Формы, ловушки, озвучка, десять упражнений. Это было бесплатно. А на платформе так разобраны все. <span id="adScore"></span></p>
   <div class="pains">
-    <div class="card pain white rv"><h3>Правило понятно. Рот закрыт.</h3><p>Ты сейчас знаешь про -sa. Закрываешь сайт. Идёшь в кафе. Официант спрашивает, будете ли десерт.</p><p>Хочешь сказать: если есть с фисташками, возьму. Корень помнишь. Время помнишь. Суффикс где-то рядом. Лицо уехало.</p><p>Говоришь, tamam. Приносят счёт.</p></div>
-    <div class="card pain rv"><h3>Субтитры успевают. Ты нет.</h3><p>Включаешь дизи без перевода. Героиня плачет. Герой смотрит вдаль. Она говорит длинное слово. В длинном слове шесть аффиксов.</p><p>Ставишь паузу. Перематываешь. Ставишь паузу. Включаешь русскую озвучку.</p><p>Героиня уже вышла замуж. Ты всё ещё на первом слове.</p></div>
+    <div class="card pain white rv"><h3>Учебник объясняет по-английски</h3><p>Открываешь учебник турецкого. Тема: условное наклонение. Объяснение на английском. Type one, type two, type three.</p><p>Ты учишь турецкий. Теперь ещё и английский.</p><p>Открываешь другой учебник. Там объяснение на турецком. Чтобы его понять, надо знать турецкий. Закрываешь оба.</p></div>
+    <div class="card pain rv"><h3>Стрик горит. Рот закрыт.</h3><p>Приложение тебя хвалит. Огонёк горит. Уровень растёт. Приходишь в кафе. Официант спрашивает, будете ли десерт.</p><p>Хочешь сказать: если есть с фисташками, возьму. Говоришь, tamam.</p><p>Приносят счёт. Огонёк горит.</p></div>
   </div>
   <div class="sub">
-    <h3>Я сделал Alterna Timur для этой паузы</h3>
-    <p class="txt">Между тем, что ты знаешь, и тем, что успеваешь сказать или услышать. Уровни от A0 до C1. Гайды, лексика, тренажёры, экзамены и материалы лежат в одном месте и идут по порядку.</p>
+    <h3>Я сделал Alterna Timur по-русски и по порядку</h3>
+    <p class="txt">Объясняю на русском, как на этой странице. Чтобы правило дошло до рта, а не до огонька. Уровни от A0 до C1. Гайды, лексика, тренажёры, экзамены и материалы лежат в одном месте и идут по порядку.</p>
     <div class="fan">
       <div class="sh" style="--rot:-2deg;--c:var(--blue)"><img src="media/nt-a0a2.webp" alt="Главная страница платформы, уровни A0-A2" loading="lazy"><span class="pill">Твой уровень</span></div>
       <div class="sh" style="--rot:2deg;--c:var(--vio)"><img src="media/n-grammar.webp" alt="Раздел грамматики на платформе" loading="lazy"><span class="pill">Грамматика</span></div>
@@ -834,7 +834,7 @@ var synth=window.speechSynthesis,trVoice=null;
 function pick(){if(!synth)return;var v=synth.getVoices();trVoice=v.filter(function(x){return x.lang==='tr-TR'})[0]||v.filter(function(x){return /^tr/i.test(x.lang)})[0]||null}
 if(synth){pick();if('onvoiceschanged' in synth)synth.addEventListener('voiceschanged',pick)}
 var cur=null;
-function say(text,btn){if(!synth)return;synth.cancel();if(cur)cur.classList.remove('on');var u=new SpeechSynthesisUtterance(text);u.lang='tr-TR';if(trVoice)u.voice=trVoice;u.rate=.9;cur=btn||null;if(cur)cur.classList.add('on');var off=function(){if(btn)btn.classList.remove('on')};u.onend=off;u.onerror=off;synth.speak(u)}
+function say(text,btn){if(!synth)return;if(!trVoice)pick();synth.cancel();if(cur)cur.classList.remove('on');var u=new SpeechSynthesisUtterance(text);u.lang='tr-TR';if(trVoice)u.voice=trVoice;u.rate=.9;cur=btn||null;if(cur)cur.classList.add('on');var off=function(){if(btn)btn.classList.remove('on')};u.onend=off;u.onerror=off;synth.speak(u)}
 window.__say=say;window.__trVoice=function(){return trVoice};
 D.addEventListener('click',function(e){var b=e.target.closest('[data-say]');if(b){e.stopPropagation();say(b.getAttribute('data-say'),b)}});
 

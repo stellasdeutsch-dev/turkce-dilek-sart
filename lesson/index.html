@@ -754,7 +754,7 @@ var synth=window.speechSynthesis,trVoice=null;
 function pick(){if(!synth)return;var v=synth.getVoices();trVoice=v.filter(function(x){return x.lang==='tr-TR'})[0]||v.filter(function(x){return /^tr/i.test(x.lang)})[0]||null}
 if(synth){pick();if('onvoiceschanged' in synth)synth.addEventListener('voiceschanged',pick)}
 var cur=null;
-function say(text,btn){if(!synth)return;synth.cancel();if(cur)cur.classList.remove('on');var u=new SpeechSynthesisUtterance(text);u.lang='tr-TR';if(trVoice)u.voice=trVoice;u.rate=.9;cur=btn||null;if(cur)cur.classList.add('on');var off=function(){if(btn)btn.classList.remove('on')};u.onend=off;u.onerror=off;synth.speak(u)}
+function say(text,btn){if(!synth)return;if(!trVoice)pick();synth.cancel();if(cur)cur.classList.remove('on');var u=new SpeechSynthesisUtterance(text);u.lang='tr-TR';if(trVoice)u.voice=trVoice;u.rate=.9;cur=btn||null;if(cur)cur.classList.add('on');var off=function(){if(btn)btn.classList.remove('on')};u.onend=off;u.onerror=off;synth.speak(u)}
 window.__say=say;window.__trVoice=function(){return trVoice};
 D.addEventListener('click',function(e){var b=e.target.closest('[data-say]');if(b){e.stopPropagation();say(b.getAttribute('data-say'),b)}});
 
