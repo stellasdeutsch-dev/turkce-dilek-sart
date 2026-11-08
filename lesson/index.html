@@ -460,6 +460,37 @@ details[open] summary .pm{rotate:45deg}
 }
 @media (max-height:700px){html.gs .stage{gap:10px;padding:14px}.cap{font-size:16px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+/* иллюстрации */
+.vz{margin:26px 0 0;display:grid;gap:18px;overflow:hidden}
+.vz svg{display:block}
+.vz-art{width:100%;height:clamp(230px,34vw,400px);border-radius:var(--r2)}
+.vz-cap{font-size:16px;line-height:1.4;color:var(--mute);text-wrap:pretty}
+.vz.white .vz-cap{color:#4b4b4b}
+.vz-tags{display:flex;flex-wrap:wrap;gap:8px}
+.vz-tag{display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:6px 14px;border-radius:99px;background:var(--card2);font-size:15px;font-weight:600;line-height:1.25;hyphens:none}
+.vz-word{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.vz-seg{display:flex;flex-direction:column;align-items:center;gap:6px}
+.vz-seg b{display:flex;align-items:center;justify-content:center;min-height:50px;min-width:50px;padding:0 12px;border-radius:12px;font:800 clamp(19px,3vw,28px)/1 var(--fh);hyphens:none}
+.vz-seg small{font-size:13px;line-height:1.2;color:var(--mute);hyphens:none}
+.vz-seg .r{background:#fff;color:var(--ink)}.vz-seg .t{background:var(--ora);color:var(--ink)}.vz-seg .s{background:var(--lime);color:var(--ink)}.vz-seg .p{background:var(--vio);color:#fff}.vz-seg .n{background:var(--red);color:#fff}.vz-seg .b{background:var(--blue);color:#fff}
+.vz-row{display:grid;gap:18px;align-items:center}
+.vz-dia{width:100%;height:auto;max-width:720px;margin:0 auto}
+.vz-t{font-family:var(--fh);font-weight:800}
+.vz-note{display:grid;gap:10px}
+.vz-note p{display:flex;flex-wrap:wrap;align-items:center;gap:2px 10px;background:var(--card2);border-radius:14px;padding:10px 14px;font-size:16px;line-height:1.3;font-weight:600;text-wrap:pretty}
+.vz-pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:10px}
+.vz-pc{background:var(--card2);border-radius:14px;padding:12px 14px;display:grid;gap:4px;transition:background .2s}
+.vz-pc:hover{background:#3d3e41}
+.vz-pc b{font:800 18px/1.15 var(--fh);color:var(--lime);hyphens:none}
+.vz-pc span{font-size:15px;line-height:1.3;hyphens:none}
+.vz-cols{display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:center}
+.vz-cols p{font-size:15px;font-weight:600;line-height:1.3}
+.vz-lab{display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:center;font-size:14px;color:var(--mute)}
+.vz-lab i{display:inline-block;width:12px;height:12px;border-radius:4px;margin-right:6px;vertical-align:-1px}
+@media (min-width:768px){.vz-row{grid-template-columns:1.2fr 1fr;gap:34px}}
+
+.vz-tag{transition:background .2s}.vz-tag:hover{background:#414245}
+.vz-note p{transition:background .2s}.vz-note p:hover{background:#3d3e41}
 </style>
 <script defer src="../assets/gsap-bundle.min.js"></script>
 </head>
@@ -538,6 +569,19 @@ details[open] summary .pm{rotate:45deg}
     </div>
   </div>
 
+  <figure class="vz card rv" id="vzCafe" aria-label="Стол в кофейне: телефон с перепиской, часы на шести, десерт с фисташками">
+    <svg class="vz-art" viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <rect width="1000" height="400" fill="#212223"/>
+      <g class="vz-win"><rect x="140" y="30" width="430" height="250" rx="18" fill="#333436"/><rect x="156" y="46" width="398" height="218" rx="10" fill="#86B9FF"/><rect x="156" y="180" width="398" height="84" fill="#1667FF"/><g class="vz-fer"><path d="M280 186h110l-14 24h-82z" fill="#fff"/><rect x="298" y="168" width="58" height="18" rx="3" fill="#fff"/><rect x="322" y="150" width="12" height="20" fill="#F23B2F"/></g><rect x="351" y="46" width="8" height="218" fill="#333436"/></g>
+      <g class="vz-clk" transform="translate(-92 -8) scale(.95)"><circle cx="760" cy="112" r="70" fill="#fff"/><circle cx="760" cy="112" r="60" fill="none" stroke="#141414" stroke-width="3"/><path d="M760 60v10M760 154v10M708 112h10M802 112h10" stroke="#141414" stroke-width="4" stroke-linecap="round"/><line class="vz-hm" x1="760" y1="112" x2="760" y2="62" stroke="#141414" stroke-width="5" stroke-linecap="round"/><line class="vz-hh" x1="760" y1="112" x2="760" y2="150" stroke="#F23B2F" stroke-width="7" stroke-linecap="round"/><circle cx="760" cy="112" r="6" fill="#141414"/></g>
+      <rect y="300" width="1000" height="100" fill="#3A3B3E"/><rect y="300" width="1000" height="8" fill="#4B4C50"/>
+      <g class="vz-cup" transform="translate(44 0)"><ellipse cx="300" cy="322" rx="74" ry="12" fill="#fff"/><path d="M246 262h108v28a42 42 0 0 1-42 42h-24a42 42 0 0 1-42-42z" fill="#fff"/><path d="M354 272h16a15 15 0 0 1 0 30h-16" fill="none" stroke="#fff" stroke-width="9"/><g fill="none" stroke="#AEB0B3" stroke-width="5" stroke-linecap="round"><path class="vz-st" d="M270 246c-10-14 10-22 0-38"/><path class="vz-st" d="M300 244c-10-14 10-22 0-38"/><path class="vz-st" d="M330 246c-10-14 10-22 0-38"/></g></g>
+      <g class="vz-ph" transform="rotate(-6 500 300)"><rect x="436" y="148" width="130" height="232" rx="20" fill="#141414" stroke="#6A6B6E" stroke-width="3"/><rect x="448" y="176" width="106" height="182" rx="8" fill="#fff"/><rect class="vz-b" x="456" y="190" width="72" height="24" rx="11" fill="#D9D9D3"/><rect class="vz-b" x="472" y="222" width="74" height="32" rx="11" fill="#141414"/><rect class="vz-b" x="456" y="262" width="42" height="22" rx="11" fill="#D9D9D3"/><rect class="vz-b" x="472" y="292" width="74" height="32" rx="11" fill="#CDFF52"/></g>
+      <g class="vz-pl" transform="translate(-70 0)"><ellipse cx="704" cy="326" rx="110" ry="17" fill="#fff"/><path d="M640 320v-50l126-18 6 66z" fill="#FFB65C"/><path d="M640 270l126-18 6 14-132 20z" fill="#fff"/><g fill="#7BC62D"><circle cx="668" cy="268" r="7"/><circle cx="702" cy="262" r="7"/><circle cx="738" cy="258" r="7"/></g></g>
+    </svg>
+    <div class="vz-tags"><span class="vz-tag">в шесть маникюр</span><span class="vz-tag">Элиф пишет</span><span class="vz-tag">десерт с фисташками</span></div>
+    <figcaption class="vz-cap">Кофейня в Кадыкёе. Один суффикс в сообщении, и вечер уже без тебя.</figcaption>
+  </figure>
   <div class="sub">
     <h3>Если живёт внутри глагола</h3>
     <p class="txt">Условное наклонение это способ сказать "если". Русский ставит "если" отдельным словом в начале. Турецкий берёт суффикс <span class="trw" lang="tr">-sa</span> или <span class="trw" lang="tr">-se</span> и сажает его в хвост глагола. Суффикс маленький. Суффикс наглый. Суффикс решает, придёшь ты или уже нет.</p>
@@ -580,6 +624,18 @@ details[open] summary .pm{rotate:45deg}
       <p class="note" id="realRu"></p>
     </div>
     <div class="grid"><div class="card rv"><h3>А сериалы на этом стоят</h3><p class="txt">Героиня плачет у моря. Герой смотрит вдаль. Вдали паром. Она говорит одно длинное слово. В нём весь сезон.</p><div class="exs"><div class="ex"><button class="say" type="button" data-say="Keşke seni hiç tanımasaydım." aria-label="Послушать"><svg class="ic"><use href="#i-say"/></svg></button><div class="ex-t"><p class="tr" lang="tr">Keşke seni hiç tanı<b class="n">ma</b><b class="s">sa</b><b class="b">y</b><b class="t">dı</b><b class="p">m</b>.</p><p class="ru">Лучше бы я тебя никогда не знала.</p></div></div></div></div></div>
+    <figure class="vz card rv" id="vzSea" aria-label="Двое на пирсе у моря, вдали паром">
+      <svg class="vz-art" viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <rect width="1000" height="400" fill="#1F2A44"/><circle cx="240" cy="96" r="46" fill="#FFB65C"/>
+        <rect y="190" width="1000" height="210" fill="#1667FF"/><g fill="none" stroke="#86B9FF" stroke-width="4" stroke-linecap="round"><path class="vz-w1" d="M60 232h70M240 262h90M660 228h90M840 258h70"/><path class="vz-w2" d="M130 300h60M400 318h80M720 320h60"/></g>
+        <g class="vz-fer" transform="translate(452 112) scale(.78)"><path d="M0 40h150l-20 26H18z" fill="#fff"/><rect x="24" y="20" width="84" height="20" rx="3" fill="#fff"/><rect x="58" y="0" width="16" height="22" fill="#F23B2F"/></g>
+        <path d="M0 352h1000v48H0z" fill="#333436"/><g fill="#404144"><rect x="150" y="352" width="30" height="48"/><rect x="480" y="352" width="30" height="48"/><rect x="810" y="352" width="30" height="48"/></g>
+        <g class="vz-her"><path d="M330 352c-6-44 4-96 44-100 20-2 36 6 42 26 8 26 2 54 2 74z" fill="#141414"/><circle cx="378" cy="244" r="28" fill="#FFCFA8"/><path d="M350 244c2-22 18-30 32-28 18 2 28 16 24 32-6-10-16-16-26-18-10 4-20 8-30 14z" fill="#141414"/><path d="M342 352c-2-44 10-70 36-70s44 26 42 70z" fill="#CDFF52"/><path d="M342 352h104l-8-10c-30 2-66 2-96 0z" fill="#CDFF52"/><path d="M360 352l-22 36M404 352l22 36" stroke="#FFCFA8" stroke-width="14" stroke-linecap="round"/><g class="vz-tear" fill="#86B9FF"><path d="M366 262c0 8-4 14-4 14s-4-6-4-14a4 4 0 0 1 8 0z"/><path d="M398 258c0 8-4 14-4 14s-4-6-4-14a4 4 0 0 1 8 0z"/></g></g>
+        <g class="vz-him"><rect x="572" y="288" width="26" height="64" rx="8" fill="#141414"/><rect x="606" y="288" width="26" height="64" rx="8" fill="#141414"/><path d="M566 300v-74a34 34 0 0 1 68 0v74z" fill="#8B6CFF"/><circle cx="600" cy="166" r="28" fill="#FFCFA8"/><path d="M574 158c2-20 20-28 34-26 16 2 24 14 22 28-8-8-20-12-32-10-8 2-16 4-24 8z" fill="#141414"/><path d="M628 212l34 40" stroke="#8B6CFF" stroke-width="18" stroke-linecap="round"/></g>
+      </svg>
+      <div class="vz-word"><span class="vz-seg"><b class="r" lang="tr">tanı</b><small>корень</small></span><span class="vz-seg"><b class="n" lang="tr">ma</b><small>не</small></span><span class="vz-seg"><b class="s" lang="tr">sa</b><small>если</small></span><span class="vz-seg"><b class="b" lang="tr">y</b><small>y</small></span><span class="vz-seg"><b class="t" lang="tr">dı</b><small>время</small></span><span class="vz-seg"><b class="p" lang="tr">m</b><small>кто</small></span></div>
+      <figcaption class="vz-cap">Вдали паром. В одном длинном слове весь сезон.</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -597,6 +653,21 @@ details[open] summary .pm{rotate:45deg}
     <div class="result"><p class="tr" lang="tr">gel<b class="t">ir</b><b class="s">se</b><b class="p">n</b></p><span class="mute">если ты придёшь</span><button class="say" type="button" data-say="gelirsen" aria-label="Послушать"><svg class="ic"><use href="#i-say"/></svg></button></div>
   </div></div></div>
   <p class="txt">Корень, время, если, кто. Перепутаешь порядок, и получится не глагол, а инсталляция.</p>
+  <figure class="vz card rv" id="vzGal" aria-label="На одной тумбе блоки свалены как попало, на другой стоят по порядку">
+    <svg class="vz-art" viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <rect width="1000" height="400" fill="#212223"/><rect y="350" width="1000" height="50" fill="#333436"/>
+      <rect x="256" y="244" width="192" height="106" rx="6" fill="#fff"/><rect x="256" y="244" width="192" height="14" fill="#D9D9D3"/><text x="352" y="293" text-anchor="middle" font-size="21" font-weight="700" fill="#141414">не глагол,</text><text x="352" y="323" text-anchor="middle" font-size="21" font-weight="700" fill="#141414">а инсталляция</text>
+      <rect x="470" y="244" width="280" height="106" rx="6" fill="#fff"/><rect x="470" y="244" width="280" height="14" fill="#D9D9D3"/><text x="610" y="309" text-anchor="middle" font-size="27" font-weight="800" fill="#141414" lang="tr">gelirsen</text>
+      <g class="vz-blk"><g transform="rotate(-14 306 200)"><rect x="268" y="164" width="86" height="74" rx="14" fill="#CDFF52"/><text class="vz-t" x="311" y="213" text-anchor="middle" font-size="34" fill="#141414">se</text></g></g>
+      <g class="vz-blk"><g transform="rotate(21 396 196)"><rect x="362" y="166" width="68" height="66" rx="14" fill="#8B6CFF"/><text class="vz-t" x="396" y="212" text-anchor="middle" font-size="34" fill="#fff">n</text></g></g>
+      <g class="vz-blk"><g transform="rotate(8 322 118)"><rect x="282" y="84" width="82" height="74" rx="14" fill="#FF9A1F"/><text class="vz-t" x="323" y="132" text-anchor="middle" font-size="34" fill="#141414">ir</text></g></g>
+      <g class="vz-blk"><g transform="rotate(-24 402 110)"><rect x="356" y="76" width="100" height="74" rx="14" fill="#fff"/><text class="vz-t" x="406" y="125" text-anchor="middle" font-size="32" fill="#141414">gel</text></g></g>
+      <g class="vz-ok"><rect x="472" y="170" width="88" height="74" rx="14" fill="#fff"/><text class="vz-t" x="516" y="218" text-anchor="middle" font-size="28" fill="#141414">gel</text></g>
+      <g class="vz-ok"><rect x="566" y="170" width="52" height="74" rx="14" fill="#FF9A1F"/><text class="vz-t" x="592" y="218" text-anchor="middle" font-size="26" fill="#141414">ir</text></g>
+      <g class="vz-ok"><rect x="624" y="170" width="68" height="74" rx="14" fill="#CDFF52"/><text class="vz-t" x="658" y="218" text-anchor="middle" font-size="28" fill="#141414">se</text></g>
+      <g class="vz-ok"><rect x="698" y="170" width="52" height="74" rx="14" fill="#8B6CFF"/><text class="vz-t" x="724" y="218" text-anchor="middle" font-size="28" fill="#fff">n</text></g>
+    </svg>
+  </figure>
 
   <div class="sub">
     <h3>Широкое время за одну минуту</h3>
@@ -631,6 +702,22 @@ details[open] summary .pm{rotate:45deg}
   <div class="sub">
     <h3>Шесть лиц. Три реальности.</h3>
     <p class="txt">Нажми на форму, услышишь её. Четверо живут по правилам. Двое нет: мы это -k, а они вставляют -lar перед -sa.</p>
+    <figure class="vz card rv" id="vzSix" aria-label="Схема: у biz суффикс -k стоит после -se, у onlar суффикс -ler встаёт перед -se">
+      <div class="vz-row">
+        <svg class="vz-dia" viewBox="0 0 720 340" aria-hidden="true">
+          <g><rect x="16" y="26" width="120" height="84" rx="16" fill="#fff"/><text class="vz-t" x="76" y="82" text-anchor="middle" font-size="38" fill="#141414">gel</text><rect x="146" y="26" width="84" height="84" rx="16" fill="#FF9A1F"/><text class="vz-t" x="188" y="82" text-anchor="middle" font-size="38" fill="#141414">ir</text><rect x="240" y="26" width="104" height="84" rx="16" fill="#CDFF52"/><text class="vz-t" x="292" y="82" text-anchor="middle" font-size="38" fill="#141414">se</text><rect class="vz-pk" x="354" y="26" width="84" height="84" rx="16" fill="#8B6CFF"/><text class="vz-pk vz-t" x="396" y="82" text-anchor="middle" font-size="38" fill="#fff">k</text></g>
+          <g transform="translate(0,178)"><rect x="16" y="26" width="120" height="84" rx="16" fill="#fff"/><text class="vz-t" x="76" y="82" text-anchor="middle" font-size="38" fill="#141414">gel</text><rect x="146" y="26" width="84" height="84" rx="16" fill="#FF9A1F"/><text class="vz-t" x="188" y="82" text-anchor="middle" font-size="38" fill="#141414">ir</text><g class="vz-ler"><rect x="240" y="26" width="112" height="84" rx="16" fill="#8B6CFF"/><text class="vz-t" x="296" y="82" text-anchor="middle" font-size="34" fill="#fff">ler</text></g><g class="vz-se2"><rect x="362" y="26" width="104" height="84" rx="16" fill="#CDFF52"/><text class="vz-t" x="414" y="82" text-anchor="middle" font-size="38" fill="#141414">se</text></g></g>
+          <path class="vz-arc" d="M500 244C560 150 500 128 296 196" fill="none" stroke="#CDFF52" stroke-width="5" stroke-linecap="round" stroke-dasharray="3 12"/>
+          <path d="M310 204l-20-4 12-16" fill="none" stroke="#CDFF52" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="520" cy="244" r="0"/>
+        </svg>
+        <div class="vz-note">
+          <p><span lang="tr" class="trw">ben, sen, o, siz</span>живут по правилам</p>
+          <p><span lang="tr" class="trw">biz</span>мы это -k</p>
+          <p><span lang="tr" class="trw">onlar</span>они вставляют -lar перед -sa</p>
+        </div>
+      </div>
+    </figure>
     <div class="seg playg" id="tblV" role="group" aria-label="Глагол"><button type="button" data-v="gel" aria-pressed="true">gelmek: приходить</button><button type="button" data-v="yap" aria-pressed="false">yapmak: делать</button><button type="button" data-v="oku" aria-pressed="false">okumak: читать</button><button type="button" data-v="gor" aria-pressed="false">görmek: видеть</button></div>
     <div class="tbl" id="tbl"></div>
   </div>
@@ -650,7 +737,29 @@ details[open] summary .pm{rotate:45deg}
       <div class="stack" id="tlC"></div>
     </div></div></div>
     <div data-mini="c"></div>
-    <div class="card white" style="margin-top:18px"><h3>Две ловушки</h3><p class="txt"><span class="trw" lang="tr">geliyor<b class="s">sa</b></span> всегда с -sa. Корень мягкий, но последняя гласная тут o, у суффикса -yor. Гармония смотрит на неё. <span class="trw" lang="tr">geldi<b class="b">y</b><b class="s">se</b></span> с буквой y: после гласной суффикс приходит только с ней.</p></div>
+        <figure class="vz card rv" id="vzEye" aria-label="Глаз скользит по буквам слова geliyorsa и останавливается на o">
+      <div class="vz-row">
+        <svg class="vz-dia" viewBox="0 0 720 300" aria-hidden="true">
+          <g fill="none" stroke="#6A6B6E" stroke-width="3" stroke-dasharray="4 8"><path d="M123 166V120M259 166V120M395 166V120"/></g>
+          <g>
+            <rect x="24" y="166" width="62" height="86" rx="12" fill="#404144"/><text class="vz-t" x="55" y="223" text-anchor="middle" font-size="36" fill="#AEB0B3">g</text>
+            <rect x="92" y="166" width="62" height="86" rx="12" fill="#404144"/><text class="vz-t" x="123" y="223" text-anchor="middle" font-size="36" fill="#fff">e</text>
+            <rect x="160" y="166" width="62" height="86" rx="12" fill="#404144"/><text class="vz-t" x="191" y="223" text-anchor="middle" font-size="36" fill="#AEB0B3">l</text>
+            <rect x="228" y="166" width="62" height="86" rx="12" fill="#404144"/><text class="vz-t" x="259" y="223" text-anchor="middle" font-size="36" fill="#fff">i</text>
+            <rect x="296" y="166" width="62" height="86" rx="12" fill="#404144"/><text class="vz-t" x="327" y="223" text-anchor="middle" font-size="36" fill="#AEB0B3">y</text>
+            <rect class="vz-o" x="364" y="166" width="62" height="86" rx="12" fill="#CDFF52"/><text class="vz-o vz-t" x="395" y="223" text-anchor="middle" font-size="36" fill="#141414">o</text>
+            <rect x="432" y="166" width="62" height="86" rx="12" fill="#404144"/><text class="vz-t" x="463" y="223" text-anchor="middle" font-size="36" fill="#AEB0B3">r</text>
+            <rect class="vz-sa" x="520" y="166" width="170" height="86" rx="12" fill="#CDFF52"/><text class="vz-sa vz-t" x="605" y="225" text-anchor="middle" font-size="42" fill="#141414">sa</text>
+          </g>
+          <g class="vz-eyeg" transform="translate(395 70)"><path d="M-62 0C-38-36 38-36 62 0C38 36-38 36-62 0Z" fill="#fff"/><circle r="20" fill="#141414"/><circle class="vz-pup" r="9" fill="#CDFF52"/></g>
+        </svg>
+        <div class="vz-note">
+          <p>Корень мягкий, но последняя гласная тут o, у суффикса <span lang="tr" class="trw">-yor.</span></p>
+          <p>Гармония смотрит на неё.</p>
+        </div>
+      </div>
+    </figure>
+<div class="card white" style="margin-top:18px"><h3>Две ловушки</h3><p class="txt"><span class="trw" lang="tr">geliyor<b class="s">sa</b></span> всегда с -sa. Корень мягкий, но последняя гласная тут o, у суффикса -yor. Гармония смотрит на неё. <span class="trw" lang="tr">geldi<b class="b">y</b><b class="s">se</b></span> с буквой y: после гласной суффикс приходит только с ней.</p></div>
   </div>
 
   <div class="sub">
@@ -662,6 +771,21 @@ details[open] summary .pm{rotate:45deg}
       <p class="note" id="nomN"></p>
     </div>
     <div class="exs"><div class="ex"><button class="say" type="button" data-say="Yorgunsan dinlen." aria-label="Послушать"><svg class="ic"><use href="#i-say"/></svg></button><div class="ex-t"><p class="tr" lang="tr">Yorgun<b class="s">san</b> dinlen.</p><p class="ru">Если устала, отдохни.</p></div></div><div class="ex"><button class="say" type="button" data-say="Evdeysen geliyorum." aria-label="Послушать"><svg class="ic"><use href="#i-say"/></svg></button><div class="ex-t"><p class="tr" lang="tr">Evde<b class="b">y</b><b class="s">se</b><b class="p">n</b> geliyorum.</p><p class="ru">Если ты дома, я иду.</p></div></div><div class="ex"><button class="say" type="button" data-say="Param varsa alırım." aria-label="Послушать"><svg class="ic"><use href="#i-say"/></svg></button><div class="ex-t"><p class="tr" lang="tr">Param var<b class="s">sa</b> alırım.</p><p class="ru">Если есть деньги, куплю.</p></div></div><div class="ex"><button class="say" type="button" data-say="Vaktin yoksa sonra ararım." aria-label="Послушать"><svg class="ic"><use href="#i-say"/></svg></button><div class="ex-t"><p class="tr" lang="tr">Vaktin yok<b class="s">sa</b> sonra ararım.</p><p class="ru">Если нет времени, позвоню позже.</p></div></div><div class="ex"><button class="say" type="button" data-say="Hasta değilsen gel." aria-label="Послушать"><svg class="ic"><use href="#i-say"/></svg></button><div class="ex-t"><p class="tr" lang="tr">Hasta değil<b class="s">se</b><b class="p">n</b> gel.</p><p class="ru">Если не болеешь, приходи.</p></div></div></div>
+    <figure class="vz card rv" id="vzY" aria-label="Слово на согласную сцепляется с суффиксом сразу, слову на гласную нужен мостик y">
+      <div class="vz-row">
+        <svg class="vz-dia" viewBox="0 0 720 320" aria-hidden="true">
+          <g><rect x="60" y="20" width="240" height="84" rx="16" fill="#fff"/><text class="vz-t" x="180" y="76" text-anchor="middle" font-size="38" fill="#141414">yorgun</text><rect class="vz-san" x="306" y="20" width="136" height="84" rx="16" fill="#CDFF52"/><text class="vz-san vz-t" x="374" y="76" text-anchor="middle" font-size="38" fill="#141414">san</text></g>
+          <path d="M20 290v-90a14 14 0 0 1 14-14h260v104z" fill="#404144"/><path d="M700 290v-90a14 14 0 0 0-14-14H426v104z" fill="#404144"/>
+          <g><rect x="60" y="134" width="210" height="84" rx="16" fill="#fff"/><text class="vz-t" x="165" y="190" text-anchor="middle" font-size="38" fill="#141414">evde</text></g>
+          <g><rect x="450" y="134" width="130" height="84" rx="16" fill="#CDFF52"/><text class="vz-t" x="515" y="190" text-anchor="middle" font-size="38" fill="#141414">se</text><rect x="586" y="134" width="84" height="84" rx="16" fill="#8B6CFF"/><text class="vz-t" x="628" y="190" text-anchor="middle" font-size="38" fill="#fff">n</text></g>
+          <g class="vz-yb"><rect x="302" y="134" width="116" height="84" rx="16" fill="#1667FF"/><text class="vz-t" x="360" y="190" text-anchor="middle" font-size="42" fill="#fff">y</text><rect x="294" y="218" width="132" height="18" rx="6" fill="#86B9FF"/></g>
+        </svg>
+        <div class="vz-note">
+          <p>Согласная, y не нужна.</p>
+          <p>Слово кончается на гласную, поэтому y.</p>
+        </div>
+      </div>
+    </figure>
     <div data-mini="d"></div>
   </div>
 
@@ -678,6 +802,22 @@ details[open] summary .pm{rotate:45deg}
       <div class="stack" id="altS" lang="tr"></div>
       <div class="stack" id="altC"></div>
     </div></div></div>
+    <figure class="vz card rv" id="vzFork" aria-label="Развилка: перед гласной p становится b, перед -sa остаётся p">
+      <svg class="vz-dia" viewBox="0 0 720 340" aria-hidden="true" style="max-width:640px">
+        <path class="vz-rd" d="M238 170C300 170 310 74 372 74" fill="none" stroke="#FF9A1F" stroke-width="6" stroke-linecap="round" stroke-dasharray="4 13"/>
+        <path class="vz-rd" d="M238 170C300 170 310 266 372 266" fill="none" stroke="#CDFF52" stroke-width="6" stroke-linecap="round" stroke-dasharray="4 13"/>
+        <rect x="16" y="130" width="146" height="80" rx="16" fill="#fff"/><text class="vz-t" x="89" y="184" text-anchor="middle" font-size="36" fill="#141414">kita</text><rect x="168" y="130" width="66" height="80" rx="16" fill="#FF9A1F"/><text class="vz-t" x="201" y="184" text-anchor="middle" font-size="36" fill="#141414">p</text>
+        <g class="vz-f1"><rect x="374" y="34" width="124" height="80" rx="16" fill="#fff"/><text class="vz-t" x="436" y="88" text-anchor="middle" font-size="36" fill="#141414">kita</text><rect x="504" y="34" width="66" height="80" rx="16" fill="#F23B2F"/><text class="vz-t" x="537" y="88" text-anchor="middle" font-size="36" fill="#fff">b</text><rect x="576" y="34" width="66" height="80" rx="16" fill="#8B6CFF"/><text class="vz-t" x="609" y="88" text-anchor="middle" font-size="36" fill="#fff">ı</text></g>
+        <g class="vz-f2"><rect x="374" y="226" width="124" height="80" rx="16" fill="#fff"/><text class="vz-t" x="436" y="280" text-anchor="middle" font-size="36" fill="#141414">kita</text><rect x="504" y="226" width="66" height="80" rx="16" fill="#FF9A1F"/><text class="vz-t" x="537" y="280" text-anchor="middle" font-size="36" fill="#141414">p</text><rect x="576" y="226" width="96" height="80" rx="16" fill="#CDFF52"/><text class="vz-t" x="624" y="280" text-anchor="middle" font-size="36" fill="#141414">sa</text></g>
+      </svg>
+      <div class="vz-pair">
+        <div class="vz-pc"><b>p и b</b><span lang="tr">kitabı, kitapsa</span></div>
+        <div class="vz-pc"><b>ç и c</b><span lang="tr">ağacı, ağaçsa</span></div>
+        <div class="vz-pc"><b>t и d</b><span lang="tr">gider, gitse</span></div>
+        <div class="vz-pc"><b>k и ğ</b><span lang="tr">geleceğim, geleceksem</span></div>
+      </div>
+      <figcaption class="vz-cap">Перед гласной буква сдаётся. Перед -sa незачем: s согласная.</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -709,6 +849,27 @@ details[open] summary .pm{rotate:45deg}
     <div class="out"><p class="tr" lang="tr" id="pickTr"></p><button class="say" type="button" id="pickSay" aria-label="Послушать"><svg class="ic"><use href="#i-say"/></svg></button></div>
     <p class="note" id="pickN"></p>
   </div>
+  <figure class="vz card rv" id="vzHalf" aria-label="Схема фразы: первая половина кончается формой с -se, вторая живёт обычной жизнью">
+    <div class="vz-row">
+      <svg class="vz-dia" viewBox="0 0 720 330" aria-hidden="true">
+        <g class="vz-eg"><rect x="10" y="30" width="122" height="84" rx="16" fill="none" stroke="#AEB0B3" stroke-width="3" stroke-dasharray="7 8"/><text class="vz-t" x="71" y="84" text-anchor="middle" font-size="28" fill="#AEB0B3">Eğer</text></g>
+        <rect x="144" y="30" width="130" height="84" rx="16" fill="#333436"/><text class="vz-t" x="209" y="84" text-anchor="middle" font-size="28" fill="#fff">Yarın</text>
+        <rect x="286" y="30" width="118" height="84" rx="16" fill="#fff"/><text class="vz-t" x="345" y="85" text-anchor="middle" font-size="34" fill="#141414">gel</text>
+        <rect x="412" y="30" width="86" height="84" rx="16" fill="#FF9A1F"/><text class="vz-t" x="455" y="85" text-anchor="middle" font-size="34" fill="#141414">ir</text>
+        <g class="vz-se"><rect x="506" y="30" width="96" height="84" rx="16" fill="#CDFF52"/><text class="vz-t" x="554" y="85" text-anchor="middle" font-size="34" fill="#141414">se</text></g>
+        <rect x="610" y="30" width="86" height="84" rx="16" fill="#8B6CFF"/><text class="vz-t" x="653" y="85" text-anchor="middle" font-size="34" fill="#fff">n</text>
+        <path d="M653 116v46a18 18 0 0 1-18 18H212a18 18 0 0 0-18 18v30" fill="none" stroke="#CDFF52" stroke-width="5" stroke-linecap="round" stroke-dasharray="3 12"/>
+        <circle class="vz-h" cx="430" cy="180" r="15" fill="#CDFF52"/>
+        <rect x="24" y="230" width="340" height="84" rx="16" fill="#333436"/><text class="vz-t" x="194" y="284" text-anchor="middle" font-size="30" fill="#fff">sinemaya</text>
+        <rect x="378" y="230" width="318" height="84" rx="16" fill="#333436"/><text class="vz-t" x="537" y="284" text-anchor="middle" font-size="30" fill="#fff">gideriz</text>
+      </svg>
+      <div class="vz-note">
+        <p>Если стоит в конце.</p>
+        <p><span lang="tr" class="trw">Eğer</span>по желанию.</p>
+        <p>-sa только в первой половине фразы.</p>
+      </div>
+    </div>
+  </figure>
   <div class="sum">
     <div class="card limec rv"><div class="big" lang="tr">-irse</div><p>может случиться</p></div>
     <div class="card white rv"><div class="big" lang="tr">-se</div><p>мечта, просьба, вот бы</p></div>
@@ -723,6 +884,20 @@ details[open] summary .pm{rotate:45deg}
   <p class="lead">Ответ проверяется сразу. Рядом написано почему.</p>
   <div class="exl" id="exl"></div>
   <div class="card limec scorec" style="margin-top:14px" id="score"><div class="num"><span id="scN">0</span> из 10</div><p id="scT">Пока ноль. Но и упражнения ещё не начались.</p><button class="go" type="button" id="scR">Начать заново</button></div>
+  <figure class="vz card rv" id="vzEnd" aria-label="Стол сверху: десерт, две вилки, две чашки и телефон с правильным сообщением">
+    <svg class="vz-art" viewBox="0 0 1000 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <rect width="1000" height="400" fill="#3A3B3E"/><g fill="#333436"><rect x="0" y="124" width="1000" height="6"/><rect x="0" y="270" width="1000" height="6"/></g>
+      <circle cx="470" cy="200" r="130" fill="#fff"/><circle cx="470" cy="200" r="112" fill="none" stroke="#D9D9D3" stroke-width="3"/>
+      <path class="vz-sl" d="M470 200 372 144a113 113 0 0 1 196 0z" fill="#FFB65C"/><path d="M372 144a113 113 0 0 1 196 0" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round"/><g fill="#7BC62D"><circle cx="424" cy="122" r="8"/><circle cx="470" cy="108" r="8"/><circle cx="518" cy="122" r="8"/><circle cx="450" cy="152" r="7"/><circle cx="492" cy="152" r="7"/></g>
+      <g class="vz-fk" fill="#AEB0B3"><rect x="306" y="96" width="10" height="210" rx="5"/><path d="M294 96v-34h6v30h8v-30h6v30h8v-30h6v34a10 10 0 0 1-10 10h-14a10 10 0 0 1-10-10z"/></g>
+      <g class="vz-fk" fill="#AEB0B3"><rect x="624" y="96" width="10" height="210" rx="5"/><path d="M612 96v-34h6v30h8v-30h6v30h8v-30h6v34a10 10 0 0 1-10 10h-14a10 10 0 0 1-10-10z"/></g>
+      <g transform="translate(266 318)"><circle r="44" fill="#fff"/><circle r="31" fill="#6B3E12"/><path class="vz-cup2" d="M-14-7c7-9 21-9 28 0" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="5" stroke-linecap="round"/></g>
+      <g transform="translate(712 324)"><circle r="44" fill="#fff"/><circle r="31" fill="#6B3E12"/><path class="vz-cup2" d="M-14 7c7 9 21 9 28 0" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="5" stroke-linecap="round"/></g>
+      <g transform="translate(716 136) rotate(10) scale(.78)"><rect x="-58" y="-104" width="116" height="208" rx="18" fill="#141414" stroke="#6A6B6E" stroke-width="3"/><rect x="-46" y="-78" width="92" height="156" rx="8" fill="#fff"/><rect class="vz-bgood" x="-38" y="-30" width="76" height="36" rx="14" fill="#CDFF52"/></g>
+    </svg>
+    <div class="vz-word"><span class="vz-seg"><b class="r" lang="tr">Yetiş</b></span><span class="vz-seg"><b class="t" lang="tr">ir</b></span><span class="vz-seg"><b class="s" lang="tr">se</b></span><span class="vz-seg"><b class="p" lang="tr">m</b></span><span class="vz-seg"><b class="r" lang="tr">gelirim</b></span></div>
+    <figcaption class="vz-cap">Вот как надо было. Если успею, приду. Десерт был с фисташками.</figcaption>
+  </figure>
 </section>
 
 
@@ -921,6 +1096,19 @@ $$('.circ').forEach(function(c){gsap.from(c,{scale:.6,duration:.6,ease:'back.out
 if(wPath)ScrollTrigger.create({trigger:map,start:'top 75%',end:'bottom 45%',scrub:.5,onUpdate:function(s){var l=wPath.getTotalLength()*s.progress,p=wPath.getPointAtLength(l);wDot.setAttribute('cx',p.x);wDot.setAttribute('cy',p.y)}});
 $$('[data-c]').forEach(function(n){if(n.closest('#bars'))return;var v=+n.dataset.c,o={v:0};n.textContent='0';gsap.to(o,{v:v,duration:1.5,ease:'power2.out',scrollTrigger:{trigger:n,start:'top 92%',once:true},onUpdate:function(){n.textContent=Math.round(o.v)}})});
 $$('#bars .bar').forEach(function(b,i){var bar=$('i',b),n=$('b',b),v=+n.dataset.c,o={p:0};gsap.set(bar,{scaleY:0});var tl=gsap.timeline({scrollTrigger:{trigger:'#bars',start:'top 88%',end:'top 38%',scrub:.6}});tl.to(bar,{scaleY:1,ease:'none',duration:1},i*.12);tl.to(o,{p:1,ease:'none',duration:1,onUpdate:function(){n.textContent=Math.round(v*o.p)}},i*.12)});
+
+/* иллюстрации */
+function vz(sel,fn){var el=$(sel);if(!el)return;var tl=gsap.timeline({defaults:{ease:'power2.out',duration:.6},scrollTrigger:{trigger:el,start:'top 78%',once:true}});fn(tl,el)}
+function loop(tgt,el,vars){vars.repeat=-1;if(vars.yoyo===undefined)vars.yoyo=true;vars.scrollTrigger={trigger:el,start:'top bottom',end:'bottom top',toggleActions:'play pause resume pause'};gsap.to(tgt,vars)}
+vz('#vzCafe',function(tl,el){tl.from($('.vz-hh',el),{rotation:-200,svgOrigin:'760 112',duration:1.1,ease:'power3.out'}).from($$('.vz-b',el),{scale:.4,transformOrigin:'0 50%',autoAlpha:0,stagger:.14,duration:.4},.2);loop($('.vz-fer',el),el,{x:30,duration:5,ease:'sine.inOut'});$$('.vz-st',el).forEach(function(p,i){loop(p,el,{y:-10,opacity:.35,duration:1.3+i*.2,ease:'sine.inOut'})})});
+vz('#vzSea',function(tl,el){tl.from($('.vz-fer',el),{x:-140,duration:1.4,ease:'power2.out'}).from($('.vz-tear',el).children,{y:-16,autoAlpha:0,stagger:.2,duration:.5},.6).from($$('.vz-seg',el),{y:18,autoAlpha:0,stagger:.09,duration:.4},.3);loop($('.vz-w1',el),el,{x:14,duration:2.6,ease:'sine.inOut'});loop($('.vz-w2',el),el,{x:-12,duration:3.1,ease:'sine.inOut'})});
+vz('#vzGal',function(tl,el){tl.from($$('.vz-blk',el),{y:-150,autoAlpha:0,stagger:.12,duration:.7,ease:'bounce.out'}).from($$('.vz-ok',el),{y:-40,autoAlpha:0,stagger:.14,duration:.45,ease:'back.out(2)'},.5)});
+vz('#vzSix',function(tl,el){tl.from($$('.vz-pk',el),{autoAlpha:0,y:-16,duration:.4}).from($('.vz-ler',el),{x:238,y:-58,duration:.8,ease:'back.out(1.4)'},.3).from($('.vz-se2',el),{x:-124,duration:.8,ease:'back.out(1.2)'},.3).from($('.vz-arc',el),{autoAlpha:0,duration:.4},.9)});
+vz('#vzY',function(tl,el){tl.from($$('.vz-san',el),{x:-36,autoAlpha:0,duration:.5,ease:'back.out(2)'}).from($('.vz-yb',el),{y:-150,autoAlpha:0,duration:.8,ease:'bounce.out'},.3)});
+vz('#vzFork',function(tl,el){tl.from($('.vz-f1',el),{x:-50,autoAlpha:0,duration:.6}).from($('.vz-f2',el),{x:-50,autoAlpha:0,duration:.6},.2).from($$('.vz-pc',el),{y:18,autoAlpha:0,stagger:.08,duration:.4},.5);loop($$('.vz-rd',el),el,{strokeDashoffset:-34,duration:1.3,ease:'none',yoyo:false})});
+vz('#vzHalf',function(tl,el){tl.from($('.vz-se',el),{scale:0,transformOrigin:'50% 50%',duration:.5,ease:'back.out(2.4)'}).from($('.vz-h',el),{scale:0,transformOrigin:'50% 50%',duration:.4,ease:'back.out(3)'},.25).from($$('.vz-note p',el),{x:24,autoAlpha:0,stagger:.12,duration:.4},.2);loop($('.vz-eg',el),el,{opacity:.35,duration:1.6,ease:'sine.inOut'})});
+vz('#vzEye',function(tl,el){var e=$('.vz-eyeg',el);tl.from(e,{x:-340,duration:1.8,ease:'power1.inOut'}).from($$('.vz-o',el),{autoAlpha:.2,duration:.3},1.6).from($$('.vz-sa',el),{autoAlpha:0,x:-22,duration:.45,ease:'back.out(2)'},1.75);loop($('.vz-pup',el),el,{x:6,duration:1.4,ease:'sine.inOut'})});
+vz('#vzEnd',function(tl,el){tl.from($('.vz-sl',el),{scale:.5,transformOrigin:'50% 100%',autoAlpha:0,duration:.7,ease:'back.out(1.8)'}).from($$('.vz-fk',el),{y:30,autoAlpha:0,stagger:.12,duration:.5},.2).from($('.vz-bgood',el),{scale:.4,transformOrigin:'50% 50%',autoAlpha:0,duration:.45,ease:'back.out(2.4)'},.5);$$('.vz-cup2',el).forEach(function(p,i){loop(p,el,{y:i?4:-4,duration:1.6,ease:'sine.inOut'})})});
 var rt;addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(wave,200)});
 addEventListener('load',function(){ScrollTrigger.refresh();wave()});if(D.fonts&&D.fonts.ready)D.fonts.ready.then(function(){ScrollTrigger.refresh();wave()});
 }
