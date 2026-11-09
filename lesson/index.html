@@ -491,6 +491,22 @@ details[open] summary .pm{rotate:45deg}
 
 .vz-tag{transition:background .2s}.vz-tag:hover{background:#414245}
 .vz-note p{transition:background .2s}.vz-note p:hover{background:#3d3e41}
+/* retention: checkpoints and bridge */
+.hk{hyphens:manual;-webkit-hyphens:manual}
+.cp{margin-top:clamp(64px,8vw,110px);display:grid;gap:14px}
+.cp-bar{height:8px;background:var(--card2);border-radius:99px;overflow:hidden}
+.cp-bar i{display:block;height:100%;background:var(--lime);border-radius:99px}
+.cp p{font-size:clamp(17px,1.9vw,20px);line-height:1.45;max-width:46em;text-wrap:pretty;hyphens:manual;-webkit-hyphens:manual}
+.cp b{color:var(--lime);font-weight:700}
+.brg{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:clamp(32px,6vw,84px);align-items:center;border-bottom:1px solid var(--line)}
+.brg-ph{width:100%;height:auto;align-self:end;margin:0}
+.brg-t{padding:clamp(16px,3vw,40px) 0}
+.brg-l{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:12px;font-size:clamp(17px,1.7vw,19px);line-height:1.4;hyphens:manual;-webkit-hyphens:manual}
+.brg .lead{hyphens:manual;-webkit-hyphens:manual}
+.brg-l li{display:flex;gap:10px;align-items:flex-start}
+.brg-l .ic{color:var(--lime);font-size:20px;margin-top:3px}
+.brg .btns .btn{flex:0 1 auto}
+@media (max-width:767px){.brg{grid-template-columns:minmax(0,1fr)}.brg-ph{max-width:320px;margin:0 auto;align-self:auto}}
 </style>
 <script defer src="../assets/gsap-bundle.min.js"></script>
 </head>
@@ -550,6 +566,7 @@ details[open] summary .pm{rotate:45deg}
 
 <section class="sec wrap" id="chto" data-nav="Что это">
   <h2>Что это <span class="lime">вообще</span> такое</h2>
+  <p class="lead hk">Одно слово: <span class="trw" lang="tr">gel<b class="s">se</b></span>. В одной фразе ещё есть надежда, в другой её уже нет. Что их различает, скажу ближе к концу.</p>
   <div class="split">
     <div class="story card">
       <p>Сидишь в кофейне в Кадыкёе. Элиф пишет. Элиф спрашивает, придёшь ли ты вечером.</p>
@@ -679,6 +696,8 @@ details[open] summary .pm{rotate:45deg}
     </div>
   </div>
 
+  <div class="cp"><div class="cp-bar" aria-hidden="true"><i style="width:32%"></i></div><p><b>Треть гайда позади.</b> Дальше гармония: кто выбирает, <span class="trw" lang="tr">-sa</span> или <span class="trw" lang="tr">-se</span>. Потом шесть лиц и три реальности.</p></div>
+
   <div class="sub">
     <h3>Гармония: кто выбирает, -sa или -se</h3>
     <p class="txt">Выбирает последняя гласная. Ты не споришь. Ты смотришь.</p>
@@ -794,6 +813,8 @@ details[open] summary .pm{rotate:45deg}
     <p class="txt">Отрицание стоит сразу после корня. В широком времени -ma превращается в -maz. Да, опять характер.</p>
     <div class="exs"><div class="ex"><button class="say" type="button" data-say="Gelmezsen küserim." aria-label="Послушать"><svg class="ic"><use href="#i-say"/></svg></button><div class="ex-t"><p class="tr" lang="tr">Gel<b class="n">mez</b><b class="s">se</b><b class="p">n</b> küserim.</p><p class="ru">Если не придёшь, обижусь.</p></div></div><div class="ex"><button class="say" type="button" data-say="Gelmediysen söyle." aria-label="Послушать"><svg class="ic"><use href="#i-say"/></svg></button><div class="ex-t"><p class="tr" lang="tr">Gel<b class="n">me</b><b class="t">di</b><b class="b">y</b><b class="s">se</b><b class="p">n</b> söyle.</p><p class="ru">Если ты не пришла, так и скажи.</p></div></div><div class="ex"><button class="say" type="button" data-say="Gelmiyorsan haber ver." aria-label="Послушать"><svg class="ic"><use href="#i-say"/></svg></button><div class="ex-t"><p class="tr" lang="tr">Gel<b class="n">mi</b><b class="t">yor</b><b class="s">sa</b><b class="p">n</b> haber ver.</p><p class="ru">Если ты не идёшь, дай знать.</p></div></div><div class="ex"><button class="say" type="button" data-say="Gelmeseydin üzülürdüm." aria-label="Послушать"><svg class="ic"><use href="#i-say"/></svg></button><div class="ex-t"><p class="tr" lang="tr">Gel<b class="n">me</b><b class="s">se</b><b class="b">y</b><b class="t">di</b><b class="p">n</b> üzülürdüm.</p><p class="ru">Если бы ты не пришёл, я бы расстроилась.</p></div></div></div>
   </div>
+
+  <div class="cp"><div class="cp-bar" aria-hidden="true"><i style="width:67%"></i></div><p><b>Две трети позади.</b> Дальше буква, которая не нервничает. Потом восемь мест, где ошибаются русскоязычные, и 10 упражнений.</p></div>
 
   <div class="sub">
     <h3>Чередование: буква, которая не нервничает</h3>
