@@ -1056,7 +1056,7 @@ function lastF(v){setOut('#lastTr','#lastSay','#lastN',LAST[v][0],LAST[v][1])}la
 var DUR=900,KEY='sa-timer',start=null,tick=null;
 function rd(){try{return +sessionStorage.getItem(KEY)||0}catch(e){return 0}}
 function wr(v){try{sessionStorage.setItem(KEY,v)}catch(e){}}
-function draw(){var left=Math.max(0,DUR-Math.floor((Date.now()-start)/1000)),m=('0'+Math.floor(left/60)).slice(-2),s=('0'+left%60).slice(-2);$('#tM').textContent=m;$('#tS').textContent=s;$('#dockT').textContent=left?m+':'+s:'цена та же';if(!left){clearInterval(tick);$('#timerT').innerHTML=nb('Время вышло. Цена та же, $30. А вот -sa уже собирает вещи.')}}
+function draw(){var left=Math.max(0,DUR-Math.floor((Date.now()-start)/1000)),m=('0'+Math.floor(left/60)).slice(-2),s=('0'+left%60).slice(-2);$('#tM').textContent=m;$('#tS').textContent=s;$('#dockT').textContent=left?m+':'+s:'цена та же';if(!left){clearInterval(tick);$('#timerT').innerHTML=nb('Время вышло. Цена та же, 30 €. А вот -sa уже собирает вещи.')}}
 function startT(){if(start)return;start=rd()||Date.now();wr(start);draw();tick=setInterval(draw,1000)}
 var dock=$('#dock'),end=$('#adEnd'),adS=$('#ad');
 if('IntersectionObserver' in window){new IntersectionObserver(function(e){if(e[0].isIntersecting)startT()},{rootMargin:'0px'}).observe(adS)}else startT();
